@@ -1,6 +1,6 @@
 var Queue = function() {
   var newNum = 1
-  
+
   var oldNum = 1
   var someInstance = {};
   // Use an object with numeric keys to store values
@@ -27,4 +27,5 @@ var Queue = function() {
     }
   }
   return someInstance;
+
 };

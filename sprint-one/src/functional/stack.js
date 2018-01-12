@@ -23,14 +23,7 @@ var Stack = function() {
      return count ;
    }else{
      return 0;
-
-   }
-
-
+      }
   };
-
-
-
-
   return someInstance;
 };
