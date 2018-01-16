@@ -9,7 +9,7 @@ var Queue = function() {
 
 Queue.prototype.enqueue = function(value){
  this.storage[this.oldNum]= value;
- this.end++;
+ this.oldNum++;
 };
 Queue.prototype.dequeue = function(){
  if(this.newNum <= this.oldNum){
