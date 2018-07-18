@@ -1,12 +1,12 @@
-var Stack = function() {
-  var someInstance = {};
+const Stack = function() {
+  let someInstance = {};
 
   // Use an object with numeric keys to store values
-  var storage = {};
-  var count = 0;
+  let storage = {};
+  let count = 0;
   // Implement the methods below
   someInstance.push = function(value) {
-    storage[count] = value
+    storage[count] = value;
     count++;
 
   };

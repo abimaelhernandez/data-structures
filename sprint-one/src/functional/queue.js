@@ -1,29 +1,29 @@
 var Queue = function() {
-  var newNum = 1
+  let num = 1;
 
-  var oldNum = 1
-  var someInstance = {};
+  let oldNum = 1;
+  const someInstance = {};
   // Use an object with numeric keys to store values
-  var storage = {};
+  let storage = {};
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
-    storage[newNum] = value
-    newNum++
+    storage[num] = value;
+    num ++;
   };
 
   someInstance.dequeue = function() {
-    var counted = storage[oldNum];
+    let counted = storage[oldNum];
     delete storage[oldNum];
     oldNum++;
     return counted;
   };
 
   someInstance.size = function() {
-    if (newNum - oldNum > 0) {
-      return newNum - oldNum;
+    if (num - oldNum > 0) {
+      return num - oldNum;
     } else {
-      return 0
+      return 0 ;
     }
   }
   return someInstance;
