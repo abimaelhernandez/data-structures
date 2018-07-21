@@ -1,5 +1,5 @@
-var Stack = function() {
- var Instance = Object.create(stackMethods);
+const Stack = function() {
+ let Instance = Object.create(stackMethods);
  Instance.count = 0;
  Instance.storage = {};
  return Instance;
@@ -12,6 +12,7 @@ var stackMethods = {
    this.storage[this.count] = value;
    this.count++;
  },
+
  pop: function(){
    if(this.count > 0){
      this.count--;
@@ -19,6 +20,7 @@ var stackMethods = {
      return value;
    }
  },
+
  size: function(){
    return this.count;
  }

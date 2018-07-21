@@ -1,5 +1,5 @@
-var Queue = function() {
- var instance = Object.create(queueMethods);
+const Queue = function() {
+ let instance = Object.create(queueMethods);
  instance.newNum = 0;
  instance.oldNum = 0;
  instance.storage = {};
@@ -9,14 +9,14 @@ var Queue = function() {
  // but try not not reference your old code in writing the new style.
 };
 
-var queueMethods = {
+let queueMethods = {
 enqueue: function(value){
  this.storage[this.oldNum]= value;
  this.oldNum++;
 },
 dequeue: function(){
  if(this.newNum <= this.oldNum){
-   var value = this.storage[this.newNum];
+   let value = this.storage[this.newNum];
    delete this.storage[this.newNum];
    this.newNum++;
    return value;
