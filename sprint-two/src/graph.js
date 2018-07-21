@@ -1,10 +1,11 @@
 
 
 // Instantiate a new graph
-var Graph = function() {
+ const Graph = function() {
+
 };
 
-// Add a node to the graph, passing in the node's value.
+// Add a node to the graph, passing in the node's value.const
 Graph.prototype.addNode = function(node) {
 };
 
@@ -35,5 +36,3 @@ Graph.prototype.forEachNode = function(cb) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
-

@@ -5,15 +5,17 @@ var BinarySearchTree = function(value) {};
  * Complexity: What is the time complexity of the above functions?
  */
 var BinarySearchTree = function(value) {
-  var binaryTree = Object.create(BinarySearchTree.prototype);
+  let binaryTree = Object.create(BinarySearchTree.prototype);
+  binaryTree.value = value;
   binaryTree.left = null;
   binaryTree.right = null;
-  binaryTree.value = value;
   return binaryTree;
 };
+
 BinarySearchTree.prototype.insert = function(value) {
-  var childTree = BinarySearchTree(value);
-  var test = function(child, node) {
+  let childTree = BinarySearchTree(value);
+
+  let test = (child, node) => {
     if (child.value < node.value) {
       if (node.left === null) {
         node.left = child;
@@ -30,6 +32,7 @@ BinarySearchTree.prototype.insert = function(value) {
   };
   test(childTree, this);
 };
+
 BinarySearchTree.prototype.contains = function(target) {
   if (this.value === target) {
     return true;
@@ -47,6 +50,7 @@ BinarySearchTree.prototype.contains = function(target) {
     }
   };
 };
+
 BinarySearchTree.prototype.depthFirstLog = function(cb) {
   cb(this.value);
   if (this.left) {
